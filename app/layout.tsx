@@ -76,6 +76,10 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning className={`${jakarta.variable} ${playfair.variable}`}>
       <head>
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://nyc3.digitaloceanspaces.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -89,8 +93,12 @@ export default function RootLayout({
               telephone: '011 4287-0216',
               address: {
                 '@type': 'PostalAddress',
+                addressLocality: 'Florencio Varela',
+                addressRegion: 'Buenos Aires',
                 addressCountry: 'AR',
               },
+              image: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/Logo 600x600px circulo amarillo2.png`,
+              priceRange: '$$',
               sameAs: [
                 'https://www.facebook.com/inmobiliaria.marile/',
                 'https://www.instagram.com/marile_setrini_inmobiliaria',

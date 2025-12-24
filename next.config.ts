@@ -11,8 +11,12 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: '*.supabase.co',
       },
+      {
+        protocol: 'https',
+        hostname: '*.digitaloceanspaces.com',
+      },
     ],
-    qualities: [75, 85],
+    formats: ['image/avif', 'image/webp'],
   },
   experimental: {
     serverActions: {

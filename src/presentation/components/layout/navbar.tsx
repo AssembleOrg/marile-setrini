@@ -105,6 +105,7 @@ export function Navbar() {
                             onClick={toggle}
                             hiddenFrom="md"
                             size="sm"
+                            aria-label="Abrir menú"
                         />
                     </Group>
                 </Group>

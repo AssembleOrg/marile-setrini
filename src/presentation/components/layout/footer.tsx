@@ -72,7 +72,7 @@ export function Footer() {
                                 Marile Setrini
                             </Text>
                         </Group>
-                        <Text size="sm" c="dimmed" maw={250}>
+                        <Text size="sm" c="gray.7" maw={250}>
                             Tu inmobiliaria de confianza. Encontrá tu próximo hogar con nosotros.
                         </Text>
                         <Group gap="xs">
@@ -101,7 +101,7 @@ export function Footer() {
 
                     {/* Quick Links */}
                     <Stack gap="sm">
-                        <Text fw={600} size="sm" tt="uppercase" c="dimmed">
+                        <Text fw={600} size="sm" tt="uppercase" c="gray.8">
                             Navegación
                         </Text>
                         {quickLinks.map((link) => (
@@ -110,7 +110,7 @@ export function Footer() {
                                 component={Link}
                                 href={link.href}
                                 size="sm"
-                                c="gray.7"
+                                c="gray.8"
                                 underline="hover"
                             >
                                 {link.label}
@@ -120,12 +120,12 @@ export function Footer() {
 
                     {/* Contact Info */}
                     <Stack gap="sm">
-                        <Text fw={600} size="sm" tt="uppercase" c="dimmed">
+                        <Text fw={600} size="sm" tt="uppercase" c="gray.8">
                             Contacto
                         </Text>
                         <Group gap="xs">
                             <IconPhone size={16} />
-                            <Anchor href="tel:01142870216" size="sm" c="gray.7">
+                            <Anchor href="tel:01142870216" size="sm" c="gray.8">
                                 011 4287-0216
                             </Anchor>
                         </Group>
@@ -135,7 +135,7 @@ export function Footer() {
                                 href="https://wa.me/5491163975246"
                                 target="_blank"
                                 size="sm"
-                                c="gray.7"
+                                c="gray.8"
                             >
                                 +54 9 11 6397-5246
                             </Anchor>
@@ -146,7 +146,7 @@ export function Footer() {
                                 href="https://maps.app.goo.gl/i7Ktf8WW8nHDXJ9Y7"
                                 target="_blank"
                                 size="sm"
-                                c="gray.7"
+                                c="gray.8"
                                 maw={180}
                             >
                                 Ver ubicación en Google Maps
@@ -156,14 +156,14 @@ export function Footer() {
 
                     {/* Links */}
                     <Stack gap="sm">
-                        <Text fw={600} size="sm" tt="uppercase" c="dimmed">
+                        <Text fw={600} size="sm" tt="uppercase" c="gray.8">
                             Más
                         </Text>
                         <Anchor
                             href="https://linktr.ee/marileSetrini"
                             target="_blank"
                             size="sm"
-                            c="gray.7"
+                            c="gray.8"
                         >
                             <Group gap={4}>
                                 Linktree
@@ -176,7 +176,7 @@ export function Footer() {
                 <Divider my="xl" />
 
                 <Group justify="space-between" wrap="wrap">
-                    <Text size="xs" c="dimmed">
+                    <Text size="xs" c="gray.8">
                         © {currentYear} Marile Setrini Inmobiliaria. Todos los derechos reservados.
                     </Text>
                     {/* <Text size="xs" c="dimmed">

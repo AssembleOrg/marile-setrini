@@ -71,8 +71,31 @@ export default async function PropertyDetailPage({ params }: Props) {
     )
     const whatsappLink = `https://wa.me/5491163975246?text=${whatsappMessage}`
 
+    const propertyJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: property.title,
+        description: property.description,
+        image: property.images,
+        brand: {
+            '@type': 'Brand',
+            name: 'Marile Setrini Inmobiliaria',
+        },
+        offers: {
+            '@type': 'Offer',
+            price: property.price,
+            priceCurrency: property.currency,
+            availability: 'https://schema.org/InStock',
+            url: `${process.env.NEXT_PUBLIC_APP_URL || ''}/propiedades/${property.slug}`,
+        },
+    }
+
     return (
         <Container size="xl" py="xl">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(propertyJsonLd) }}
+            />
             <Grid gutter="xl">
                 {/* Images */}
                 <GridCol span={12}>

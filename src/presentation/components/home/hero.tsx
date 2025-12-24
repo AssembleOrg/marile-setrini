@@ -25,7 +25,7 @@ export function Hero() {
                     priority
                     fetchPriority="high"
                     sizes="100vw"
-                    quality={85}
+                    quality={70}
                     className={styles.heroImage}
                 />
                 <div className={styles.imageOverlay} />
