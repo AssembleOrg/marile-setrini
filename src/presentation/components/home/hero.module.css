@@ -1,0 +1,103 @@
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 140px 0 100px;
+}
+
+.backgroundImage {
+    position: absolute;
+    inset: -50px;
+    z-index: 0;
+    /* Removed CSS background-image */
+    will-change: transform;
+}
+
+.heroImage {
+    object-fit: cover;
+    object-position: center;
+}
+
+.imageOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(17, 17, 20, 0.75) 0%,
+            rgba(17, 17, 20, 0.5) 40%,
+            rgba(17, 17, 20, 0.7) 100%);
+    z-index: 1;
+}
+
+.noiseTexture {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' /%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.titleWrapper {
+    text-align: left;
+    max-width: 700px;
+}
+
+.title {
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 700;
+    line-height: 0.95;
+    color: white;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.03em;
+    font-family: var(--font-playfair);
+    margin-bottom: 0;
+}
+
+.subtitleWrapper {
+    text-align: left;
+    max-width: 500px;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 400;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    line-height: 1.6;
+}
+
+.searchWrapper {
+    margin-top: 24px;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 0 70px;
+    }
+
+    .titleWrapper,
+    .subtitleWrapper {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .content {
+        gap: 24px;
+    }
+}

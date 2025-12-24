@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client"
+  output   = "./generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum TransactionType {
+  VENTA
+  ALQUILER
+}
+
+enum PropertyType {
+  TERRENO
+  DEPARTAMENTO
+  CASA
+  QUINTA
+  OFICINA
+  LOCAL
+  EDIFICIO_COMERCIAL
+  CAMPO
+  PH
+}
+
+enum Currency {
+  ARS
+  USD
+}
+
+model Property {
+  id              String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  slug            String          @unique
+  title           String
+  description     String?
+  transactionType TransactionType @default(VENTA)
+  propertyType    PropertyType?
+  price           Decimal         @db.Decimal(15, 2)
+  currency        Currency        @default(ARS)
+  address         String?
+  localidadId     String?
+  localidadNombre String?
+  bedrooms        Int?
+  bathrooms       Int?
+  areaM2          Decimal?        @db.Decimal(10, 2)
+  images          String[]        @default([])
+  published       Boolean         @default(false)
+  featured        Boolean         @default(false)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@index([transactionType])
+  @@index([propertyType])
+  @@index([currency])
+  @@index([published])
+  @@index([featured])
+  @@index([price])
+}
+
+model AdminUser {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @unique @db.Uuid
+  email     String
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model ContactMessage {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name      String
+  email     String
+  phone     String?
+  message   String
+  propertyId String? @db.Uuid
+  createdAt DateTime @default(now())
+  read      Boolean  @default(false)
+
+  @@index([createdAt])
+  @@index([read])
+}

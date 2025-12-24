@@ -1,0 +1,29 @@
+.section {
+    padding: 80px 0;
+    background: white;
+}
+
+.card {
+    background: linear-gradient(135deg, #F7F7F5 0%, white 100%);
+    border: 1px solid #E6E6E6;
+    box-shadow: 0 4px 20px rgba(17, 17, 20, 0.06);
+}
+
+.title {
+    font-family: var(--font-playfair);
+    color: #111114;
+    font-weight: 600;
+}
+
+.description {
+    color: #444;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+}

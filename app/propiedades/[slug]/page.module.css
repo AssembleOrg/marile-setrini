@@ -1,0 +1,61 @@
+.imageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--mantine-color-gray-1);
+}
+
+.mainImage {
+    object-fit: cover;
+}
+
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.badges {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+}
+
+.thumbnailContainer {
+    position: relative;
+    width: 120px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.thumbnail {
+    object-fit: cover;
+}
+
+.price {
+    font-size: 2rem;
+    color: var(--mantine-color-primary-7);
+}
+
+.contactCard {
+    position: sticky;
+    top: 90px;
+}
+
+@media (max-width: 768px) {
+    .thumbnailContainer {
+        width: 80px;
+        height: 60px;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .contactCard {
+        position: static;
+    }
+}

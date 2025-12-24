@@ -1,0 +1,21 @@
+.root {
+    background: white;
+    padding: 4px;
+    border: 1px solid #E6E6E6;
+}
+
+.indicator {
+    background: #ECB856 !important;
+    box-shadow: 0 2px 8px rgba(236, 184, 86, 0.3);
+}
+
+.label {
+    font-weight: 500;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.label[data-active="true"] {
+    color: #111114 !important;
+    font-weight: 600;
+}

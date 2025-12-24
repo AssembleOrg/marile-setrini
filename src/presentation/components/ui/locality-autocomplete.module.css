@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+    background: white;
+}
+
+.option {
+    width: 100%;
+    padding: 10px 12px;
+    transition: background 0.15s ease;
+    cursor: pointer;
+}
+
+.option:hover,
+.highlighted {
+    background: var(--mantine-color-gray-1);
+}
+
+.highlighted {
+    background: var(--mantine-color-primary-0);
+}
+
+.icon {
+    color: var(--mantine-color-dimmed);
+    flex-shrink: 0;
+}
+
+.highlight {
+    background: var(--mantine-color-yellow-2);
+    font-weight: 600;
+}

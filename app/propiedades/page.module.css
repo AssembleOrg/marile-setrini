@@ -1,0 +1,10 @@
+.filterPanel {
+    position: sticky;
+    top: 90px;
+}
+
+@media (max-width: 992px) {
+    .filterPanel {
+        position: static;
+    }
+}

@@ -1,0 +1,15 @@
+.section {
+    padding: 80px 0;
+    background: white;
+}
+
+.mapContainer {
+    overflow: hidden;
+    height: 450px;
+}
+
+@media (max-width: 768px) {
+    .mapContainer {
+        height: 350px;
+    }
+}
